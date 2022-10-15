@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./JS/funcionesCategoria.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Categoría</title>
+</head>
+<body class="max-w-full">
+    <header class="pt-7 h-20 px-48">
+        <ul class="flex flex-row justify-around content-center bg-yellow-300 border-2 rounded-2xl border-black hover:shadow-lg shadow-black">
+            <li class="hover:text-sky-300 font-semibold">
+                <a href="./index.html">Inicio</a></li>
+            <li class="hover:text-sky-300 font-semibold">
+                <a href="./cliente.html">Cliente</a></li>
+            <li class="hover:text-sky-300 font-semibold">
+                <a href="./machine.html">Máquina</a></li>
+            <li class="hover:text-sky-300 font-semibold">
+                <a href="./mensajes.html">Mensajes</a></li>
+            <li class="hover:text-sky-300 font-semibold">
+                <a href="./reservaciones.html">Reservaciones</a></li>
+            <li class="hover:text-sky-300 font-semibold">
+                <a href="./reportes.html">Reportes</a></li>
+        </ul>
+    </header>
+
+    <h1 class="flex justify-center text-5xl">
+        Categoría
+    </h1>
+
+    <div class="flex justify-around mt-8 px-48">
+        <input type="text" id="name" placeholder="Nombre" 
+            class="border-2 border-black rounded-xl pl-2 w-72">
+        <input type="text" id="description" placeholder="Descripción"
+            class="border-2 border-black rounded-xl pl-2 w-72">
+    
+        <button onclick="postCategoria()" class="border-2 border-black rounded-xl w-72 hover:shadow-lg shadow-black font-semibold hover:text-sky-300 bg-yellow-300">
+            Crear categoría
+        </button>
+    </div>
+    
+    <script type="text/javascript">
+        window.onload = getCategoria();
+    </script>
+    <div id="resultadoCategoria"
+        class="px-48  mt-8 mx-48 flex justify-around">
+    </div>
+
+</body>
+</html>
